@@ -1,0 +1,194 @@
+/* base styles */
+* { 
+    box-sizing: border-box;
+   }
+
+body {
+    font-family: Merriweather;
+    background-color: #999;
+}
+
+h1 {
+    font-size: 25px;
+}
+.head {
+    text-transform: uppercase;
+    background-color: #2d3945;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.main {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: auto;
+    margin: auto;
+    
+}
+main {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.border {
+    max-width: 700px;
+    border-top: solid #2d3945 5px;
+    border-bottom: solid #2d3945 2px;
+    padding: 3px;
+    margin: 30px;
+}
+p {
+    color: #bfc3c6;
+}
+
+fieldset {
+    border: none;
+}
+
+.contact,
+.news,
+button {
+    line-height: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+.border2 {
+    border-top: solid #2d3945 2px;
+    width: 100%;
+    margin: 30px;
+}
+input,
+select {
+    background-color: #eff0f1;
+    border: none;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+textarea {
+    background-color: #eff0f1;
+    padding: 30px;
+    width: 100%;
+}
+
+label {
+    color: #bfc3c6;
+}
+
+.info,
+.zip,
+textarea {
+    margin-top: 10px;
+}
+
+legend {
+    color: #2d3945;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+::placeholder {
+    text-align: right;
+    padding-right: 5px;
+    color: #999;
+    font-style: italic;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+button {
+    display: block;
+    font-size: 25px;
+    font-weight:  700;
+    background-color: #43bbb5;
+    color: white;
+    align-self: center;
+    font-family: 'Merriweather';
+    border-radius: 7px;
+    padding: 20px;
+    
+}
+
+footer {
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* Active styles */
+input:focus,
+select:focus,
+textarea:focus {
+    border: solid red 3px;
+    background-color: wheat;
+    outline: none;
+    transition: .3s;
+}
+
+input[type="radio"]:active + label,
+  input[type="checkbox"]:active + label {
+      font-weight: 700;
+}
+
+button:hover {
+    background-color: red;
+}
+
+#zip {
+    max-width: 50%;
+ }
+/* flex box */
+
+.contact,
+.info,
+.zip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info label {
+    flex:1;
+    flex-direction: column;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+    .info,
+    .zip,
+    select {
+       flex-direction: row;
+    }
+    
+     .info input,
+     select {
+        flex-grow: 1;
+        flex-basis: 75%
+     }
+  
+     .info label,
+     .zip label {
+        flex-basis: 25%;
+        align-self: center;
+     }
+  
+     #zip {
+        max-width: 25%;
+        align-self: center;
+     }
+     .zip {
+         justify-content: flex-start;
+     }
+      .zip input {
+          flex-basis: 75%;
+      }
+}
