@@ -61,7 +61,7 @@ button {
 .border2 {
     border-top: solid #2d3945 2px;
     width: 100%;
-    margin: 30px;
+    margin: 30px auto;
 }
 input,
 select {
